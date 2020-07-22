@@ -1,0 +1,58 @@
+@import url(https://allfont.ru/allfont.css?fonts=american-retro);
+
+@font-face {
+  font-family: 'Kobzak';
+  src: url(../font/Kobzak.otf);
+}
+
+$green: #12601e;
+$light-gray: #eee;
+$dark: #313131;
+$lighter-green: #8ca636;
+$lighter-green-opacity: #4a611a93;
+
+.kobzak {
+  font-family: 'Kobzak';
+  color: $green;
+  font-size: 72px;
+}
+
+.fixed {
+  position: fixed;
+  background: $green;
+  height: 60px;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: $green;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+.wrapper {
+  width: 60%;
+  margin: auto;
+}
+
+@import "_section1";
+
+@import "_section2";
+
+@import "_section3";
+
+@import "_section4";
+
+@import "_button_up";
+
+@import "_screen_larger";

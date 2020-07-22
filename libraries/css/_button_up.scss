@@ -1,0 +1,18 @@
+#button-up {
+  position: fixed;
+  display: none;
+  bottom: 0px;
+  right: 100px;
+  background: $green;
+  opacity: .7;
+  border-radius: 50% 50% 0 0;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+
+  i {
+    font-size: 25px;
+    color: #ffffff;
+  }
+}
