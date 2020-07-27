@@ -27,6 +27,22 @@ body {
   position: relative;
 }
 
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
 .brand {
   font-family: 'Kobzak';
   font-size: 72px;
@@ -34,6 +50,7 @@ body {
 }
 
 .brand-plain {
+  width: 100%;
   text-align: center;
   margin: 30px 0;
   font-size: 30px;
@@ -60,12 +77,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   padding-top: 20px;
   padding-left: 40px;
 }
@@ -94,25 +111,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .short-info__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0;
+  padding: 0px;
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
@@ -198,6 +204,10 @@ body {
   margin: auto;
 }
 
+#home > .company .brand {
+  margin: 30px 0;
+}
+
 #home > .company .company__about .plain-text {
   margin: 25px 0;
   font-size: 18px;
@@ -239,19 +249,8 @@ body {
 }
 
 #home > .company .arrow-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
+  text-align: center;
   position: relative;
   height: 50px;
 }
@@ -278,13 +277,13 @@ body {
   top: 60px;
 }
 
-#sec3 {
+#home .our-works {
   width: 80%;
   margin: 25px auto;
   margin-top: 50px;
 }
 
-#sec3 .achivements {
+#home .our-works .achivements {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -296,7 +295,7 @@ body {
   grid-gap: 20px;
 }
 
-#sec3 .achivements .item {
+#home .our-works .achivements__item {
   position: relative;
   border-radius: 25px;
   padding: 20px;
@@ -315,7 +314,7 @@ body {
           align-items: center;
 }
 
-#sec3 .achivements .item img {
+#home .our-works .achivements__item img {
   width: 100px;
   height: 100px;
   display: -webkit-box;
@@ -323,12 +322,12 @@ body {
   display: flex;
 }
 
-#sec3 .achivements .item .plane > img {
+#home .our-works .achivements__item .plane > img {
   position: absolute;
   left: 5px;
 }
 
-#sec3 .achivements .item .digit-icon {
+#home .our-works .achivements__item--icon {
   width: 100px;
   height: 100px;
   font-size: 72px;
@@ -351,14 +350,15 @@ body {
   position: relative;
 }
 
-#sec3 .achivements .item .info {
+#home .our-works .achivements__item--info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   padding: 10px 0;
 }
 
-.my-projects {
+#home .our-works .my-projects {
   width: 80%;
   margin: auto;
   height: 200px;
@@ -377,7 +377,7 @@ body {
           align-items: center;
 }
 
-.my-projects .carousel {
+#home .our-works .my-projects .carousel {
   width: 810px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,7 +397,7 @@ body {
   z-index: 1;
 }
 
-.my-projects .carousel .btn {
+#home .our-works .my-projects .carousel .btn {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,29 +414,32 @@ body {
           align-items: center;
   background: #12601e;
   border: none;
-  padding: 10px;
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   z-index: 10;
+  opacity: 0.5;
+  top: 50%;
 }
 
-.my-projects .carousel .btn-left {
-  top: 50%;
+#home .our-works .my-projects .carousel .btn:hover {
+  opacity: 0.8;
+}
+
+#home .our-works .my-projects .carousel .btn--left {
   left: 25px;
 }
 
-.my-projects .carousel .btn-right {
-  top: 50%;
+#home .our-works .my-projects .carousel .btn--right {
   right: 25px;
 }
 
-.my-projects .carousel .btn i {
+#home .our-works .my-projects .carousel .btn i {
   font-size: 24px;
   color: white;
 }
 
-.my-projects .carousel .carousel-item {
+#home .our-works .my-projects .carousel .carousel-item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -632,5 +635,143 @@ body {
 .submit button:hover {
   background: #fff;
   color: #000;
+}
+
+.catalog {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 20px;
+  width: 90%;
+  margin: auto;
+  min-width: 1000px;
+  max-width: 1300px;
+}
+
+.catalog__menu {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+.catalog__menu_item {
+  list-style-type: none;
+  padding: 15px 10px;
+  background: #12601e;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.catalog__menu_link {
+  color: #fff;
+}
+
+.catalog__items_item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: center;
+  min-height: 200px;
+  margin: 10px 0;
+}
+
+.catalog__items_image {
+  border-radius: 25px;
+  border: 3px solid #12601e;
+  padding: 10px;
+  max-height: 200px;
+}
+
+.catalog__items_info {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.catalog__product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  -ms-grid-rows: center;
+      grid-template-rows: center;
+  grid-gap: center;
+}
+
+.catalog__product_image {
+  border-radius: 25px;
+  border: 3px solid #12601e;
+  padding: 10px;
+  max-height: 200px;
+}
+
+.catalog__product_info {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.catalog__product_specification {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  width: 100%;
+}
+
+#button-up {
+  position: fixed;
+  display: none;
+  bottom: 0px;
+  right: 100px;
+  background: #12601e;
+  opacity: .7;
+  border-radius: 50% 50% 0 0;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+#button-up i {
+  font-size: 25px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  #home .intro {
+    background-position: 0 50%;
+  }
 }
 /*# sourceMappingURL=myNewStyle.css.map */
