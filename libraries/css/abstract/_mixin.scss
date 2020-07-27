@@ -1,0 +1,17 @@
+@mixin wrapper($width: 80%) {
+  width: $width;
+  margin: auto;
+}
+
+@mixin display_mixin($display: flex, $arg1: row, $arg2: center, $arg3: center) {
+  display: $display;
+  @if ($display == flex) {
+    flex-direction: $arg1;
+    justify-content: $arg2;
+    align-items: $arg3;
+  } @if ($display == grid) {
+    grid-template-columns: $arg1;
+    grid-template-rows: $arg2;
+    grid-gap: $arg3;
+  }
+}

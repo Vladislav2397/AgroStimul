@@ -4,19 +4,13 @@
   src: url(../font/Kobzak.otf);
 }
 
-.kobzak {
-  font-family: 'Kobzak';
-  color: #12601e;
-  font-size: 72px;
-}
-
 .fixed {
-  position: fixed;
+  position: fixed !important;
   background: #12601e;
-  height: 60px;
-  z-index: 1000;
-  top: 0;
-  left: 0;
+  height: 60px !important;
+  z-index: 1000 !important;
+  top: 0 !important;
+  left: 0 !important;
 }
 
 * {
@@ -33,19 +27,32 @@ body {
   position: relative;
 }
 
-.wrapper {
-  width: 60%;
-  margin: auto;
+.brand {
+  font-family: 'Kobzak';
+  font-size: 72px;
+  padding: 20px 0;
 }
 
-#sec1 {
+.brand-plain {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 30px;
+}
+
+.brand-plain:nth-child(1) {
+  margin-top: 100px;
+}
+
+#home > .intro {
   background: url(../../images/bgIndex.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
+  max-height: 1300px;
+  min-height: 600px;
   position: relative;
 }
 
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,21 +67,17 @@ header {
       -ms-flex-align: baseline;
           align-items: baseline;
   padding-top: 20px;
-}
-
-header span, header p, header h2 {
-  color: #12601e;
   padding-left: 40px;
 }
 
-header span {
+.header span {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 18px;
 }
 
-header p {
-  font-size: 16px;
+.header span:last-child {
+  font-size: 15px;
 }
 
 .short-info {
@@ -88,31 +91,39 @@ header p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.short-info .info-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #12601e;
-  padding-left: 10px;
+}
+
+.short-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
   word-wrap: normal;
 }
 
-.short-info .info-item:nth-child(2) {
+.short-info__item:nth-child(2) {
   margin-top: 20px;
 }
 
-nav {
+.nav {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -133,7 +144,7 @@ nav {
           align-items: center;
 }
 
-nav a {
+.nav__link {
   color: #fff;
   font-size: 20px;
   padding-left: 30px;
@@ -143,6 +154,13 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -151,7 +169,7 @@ nav a {
   z-index: 1;
 }
 
-nav a::after {
+.nav__link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -165,36 +183,37 @@ nav a::after {
   z-index: -1;
 }
 
-nav a:hover {
+.nav__link:hover {
   color: #000;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-nav a:hover::after {
+.nav__link:hover::after {
   height: 120%;
 }
 
-#sec2 h2 {
-  margin: 50px 0;
+#home > .company {
+  width: 60%;
+  margin: auto;
 }
 
-#sec2 p {
+#home > .company .company__about .plain-text {
   margin: 25px 0;
   font-size: 18px;
   color: #12601e;
   font-weight: 600;
 }
 
-#sec2 p:first {
+#home > .company .company__about .plain-text:first-child {
   margin-top: 0;
 }
 
-#sec2 .links {
+#home > .company .company-links {
   width: 100%;
 }
 
-#sec2 .links div {
+#home > .company .company-links__background {
   width: 100%;
   padding: 25px;
   border: 1px solid #12601e;
@@ -202,6 +221,10 @@ nav a:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -211,11 +234,11 @@ nav a:hover::after {
   margin: 25px 0;
 }
 
-#sec2 .links div a {
+#home > .company .company-links__link {
   font-weight: 600;
 }
 
-#sec2 .arrow-bottom {
+#home > .company .arrow-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,24 +256,24 @@ nav a:hover::after {
   height: 50px;
 }
 
-#sec2 .arrow-bottom i {
+#home > .company .arrow-bottom i {
   position: absolute;
   font-size: 100px;
-  opacity: 0.5;
   color: #12601e;
   top: 0;
 }
 
-#sec2 .arrow-bottom i:nth-child(1) {
+#home > .company .arrow-bottom i:nth-child(1) {
+  opacity: 0.5;
   top: 0;
 }
 
-#sec2 .arrow-bottom i:nth-child(2) {
+#home > .company .arrow-bottom i:nth-child(2) {
   opacity: 0.6;
   top: 30px;
 }
 
-#sec2 .arrow-bottom i:nth-child(3) {
+#home > .company .arrow-bottom i:nth-child(3) {
   opacity: 0.7;
   top: 60px;
 }
@@ -261,16 +284,6 @@ nav a:hover::after {
   margin-top: 50px;
 }
 
-#sec3 h2 {
-  color: #12601e;
-  text-align: center;
-  margin: 30px 0;
-}
-
-#sec3 h2:nth-child(1) {
-  margin-top: 100px;
-}
-
 #sec3 .achivements {
   width: 100%;
   display: -ms-grid;
@@ -279,6 +292,7 @@ nav a:hover::after {
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
+  grid-gap: center;
   grid-gap: 20px;
 }
 
@@ -293,6 +307,9 @@ nav a:hover::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -318,6 +335,10 @@ nav a:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -365,6 +386,9 @@ nav a:hover::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -378,6 +402,10 @@ nav a:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -393,11 +421,6 @@ nav a:hover::after {
   z-index: 10;
 }
 
-.my-projects .carousel .btn i {
-  font-size: 24px;
-  color: white;
-}
-
 .my-projects .carousel .btn-left {
   top: 50%;
   left: 25px;
@@ -406,6 +429,11 @@ nav a:hover::after {
 .my-projects .carousel .btn-right {
   top: 50%;
   right: 25px;
+}
+
+.my-projects .carousel .btn i {
+  font-size: 24px;
+  color: white;
 }
 
 .my-projects .carousel .carousel-item {
@@ -604,30 +632,5 @@ nav a:hover::after {
 .submit button:hover {
   background: #fff;
   color: #000;
-}
-
-#button-up {
-  position: fixed;
-  display: none;
-  bottom: 0px;
-  right: 100px;
-  background: #12601e;
-  opacity: .7;
-  border-radius: 50% 50% 0 0;
-  padding: 15px;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-}
-
-#button-up i {
-  font-size: 25px;
-  color: #ffffff;
-}
-
-@media screen and (min-width: 1200px) {
-  #sec1 {
-    background-position: 0 30%;
-  }
 }
 /*# sourceMappingURL=myNewStyle.css.map */
