@@ -1,0 +1,44 @@
+.intro {
+	background: url(../../images/bgIndex.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	max-height: 1300px;
+  min-height: 600px;
+	position: relative;
+}
+
+.header {
+  @include display_flex_mixin(column);
+  padding-top: 20px;
+  padding-left: 40px;
+
+	span {
+		text-transform: uppercase;
+		font-weight: 600;
+    font-size: 18px;
+    
+    &:last-child {
+      font-size: 15px;
+    }
+	}
+}
+
+.short-info {
+	position: absolute;
+	bottom: 250px;
+	left: 40px;
+  @include display_flex_mixin(column, center);
+
+	&__item {
+    margin: 0;
+    padding: 0px;
+		font-size: 20px;
+		font-weight: 600;
+		font-style: italic;
+		word-wrap: normal;
+
+		&:nth-child(2) {
+			margin-top: 20px;
+		}
+	}
+}

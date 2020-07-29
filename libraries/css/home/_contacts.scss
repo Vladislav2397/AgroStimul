@@ -1,0 +1,91 @@
+.contacts {
+  padding: 50px;
+  border-top: 100px solid $GREEN;
+  border-bottom: 100px solid $GREEN;
+  
+  h1 {
+    margin-left: 40px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  input, textarea {
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.my-table-info {
+  tr > td {
+    padding: 20px;
+  }
+
+  tr > td:nth-child(odd) {
+    text-align: right;
+  }
+
+  tr > td:nth-child(even) {
+    text-align: left;
+  }
+}
+
+.my-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info{
+  width: 80%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+
+  label, input {
+    margin-bottom: 20px;
+  }
+
+  input, textarea {
+    border: 1px solid $GREEN;
+  }
+
+  label {
+    text-align: right;
+    margin-right: 20px;
+  }
+}
+
+.submit {
+  text-align: center;
+  margin: 30px;
+  margin-left: 150px;
+
+  button {
+    background: none;
+    border: 1px solid $GREEN;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+
+    &:hover {
+      background: $GREEN;
+      color: #fff;
+    }
+  }
+}
