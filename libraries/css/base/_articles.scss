@@ -1,0 +1,18 @@
+.articles {
+  @include wrapper(80%);
+  
+  &__item {
+    @include display_mixin(grid, 1fr 4fr, 1fr, 20px);
+    padding: 20px 10px;
+    border-bottom: 1px solid $GREEN;
+
+    &_image {
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+      border: 1px solid $GREEN;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+  }
+}

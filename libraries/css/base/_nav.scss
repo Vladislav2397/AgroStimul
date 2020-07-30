@@ -42,3 +42,12 @@
 		}
 	}
 }
+
+.fixed {
+	position: fixed;
+	background: $GREEN;
+	height: 60px;
+	z-index: 100;
+	top: 0;
+	left: 0;
+  }

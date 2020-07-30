@@ -1,16 +1,6 @@
-@import url(https://allfont.ru/allfont.css?fonts=american-retro);
 @font-face {
   font-family: 'Kobzak';
   src: url(../font/Kobzak.otf);
-}
-
-.fixed {
-  position: fixed !important;
-  background: #12601e;
-  height: 60px !important;
-  z-index: 1000 !important;
-  top: 0 !important;
-  left: 0 !important;
 }
 
 * {
@@ -131,6 +121,15 @@ section {
   height: 120%;
 }
 
+.fixed {
+  position: fixed;
+  background: #12601e;
+  height: 60px;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
 .catalog {
   display: -ms-grid;
   display: grid;
@@ -154,13 +153,8 @@ section {
 .catalog__menu_item {
   list-style-type: none;
   padding: 15px 10px;
-  background: #12601e;
   margin: 5px 0;
-  border-radius: 10px;
-}
-
-.catalog__menu_link {
-  color: #fff;
+  border-bottom: 2px solid #12601e;
 }
 
 .catalog__items_item {
@@ -285,6 +279,32 @@ section {
   display: flex;
 }
 
+.articles {
+  width: 80%;
+  margin: auto;
+}
+
+.articles__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 20px;
+  padding: 20px 10px;
+  border-bottom: 1px solid #12601e;
+}
+
+.articles__item_image {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #12601e;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 #home .intro {
   background: url(../../images/bgIndex.jpg) no-repeat;
   background-size: cover;
@@ -367,7 +387,6 @@ section {
   margin: 25px 0;
   font-size: 18px;
   color: #12601e;
-  font-weight: 600;
 }
 
 #home .company .company__about .plain-text:first-child {
@@ -514,7 +533,7 @@ section {
 }
 
 #home .our-works .my-projects {
-  width: 80%;
+  width: 100%;
   margin: auto;
   height: 200px;
   display: -webkit-box;

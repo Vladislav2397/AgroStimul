@@ -10,13 +10,8 @@
     &_item {
       list-style-type: none;
       padding: 15px 10px;
-      background: $GREEN;
       margin: 5px 0;
-      border-radius: 10px;
-    }
-
-    &_link {
-      color: #fff;
+      border-bottom: 2px solid $GREEN;
     }
   }
 
