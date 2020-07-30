@@ -404,7 +404,7 @@ section {
 
 #home .short-info__item {
   margin: 0;
-  padding: 0px;
+  padding: 0;
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
@@ -440,7 +440,7 @@ section {
 
 #home .company .company-links__background {
   width: 100%;
-  padding: 25px;
+  padding: 25px 0;
   border: 1px solid #12601e;
   border-radius: 25px;
   display: -webkit-box;
@@ -457,6 +457,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   margin: 25px 0;
+  text-align: center;
 }
 
 #home .company .company-links__link {
@@ -465,7 +466,19 @@ section {
 
 #home .company .arrow-bottom {
   width: 100%;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   height: 50px;
 }
@@ -873,6 +886,75 @@ section {
 @media screen and (min-width: 1200px) {
   #home .intro {
     background-position: 0 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #home .company {
+    width: 85%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 999px) and (min-width: 768px) {
+  #home .company {
+    width: 80%;
+    margin: auto;
+  }
+  #home .our-works .achivements {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-gap: 0px;
+  }
+  #home .our-works .my-projects .carousel {
+    width: 540px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 375px) {
+  .brand {
+    font-size: 54px;
+  }
+  #home .intro .header span {
+    font-size: 15px;
+  }
+  #home .intro .header span:last-child {
+    font-size: 13px;
+  }
+  #home .intro .short-info {
+    bottom: 200px;
+  }
+  #home .intro .short-info__item {
+    font-size: 15px;
+  }
+  #home .company {
+    width: 90%;
+    margin: auto;
+  }
+  #home .our-works .achivements {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-gap: 0;
+  }
+  #home .our-works .my-projects .carousel {
+    width: 270px;
+  }
+  #home .work-plan .steps-of-work {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-gap: 0;
   }
 }
 /*# sourceMappingURL=myNewStyle.css.map */

@@ -20,11 +20,12 @@
 
     &__background {
       width: 100%;
-      padding: 25px;
+      padding: 25px 0;
       border: 1px solid $GREEN;
       border-radius: 25px;
       @include display_mixin();
       margin: 25px 0;
+      text-align: center;
     }
 
     &__link {
@@ -34,7 +35,7 @@
 
   .arrow-bottom {
     width: 100%;
-    text-align: center;
+    @include display_flex_mixin(column, center, center);
     position: relative;
     height: 50px;
 

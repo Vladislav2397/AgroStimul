@@ -1,0 +1,43 @@
+@media (max-width: 767px) and (min-width: 375px) {
+
+  .brand {
+    font-size: 54px;
+  }
+
+  #home {
+
+    .intro .header span {
+      font-size: 15px;
+
+      &:last-child {
+        font-size: 13px;
+      }
+    }
+
+    .intro .short-info {
+      bottom: 200px;
+
+      &__item {
+        font-size: 15px;
+      }
+    }
+    
+    .company {
+      @include wrapper(90%);
+    }
+
+    .our-works {
+      .achivements {
+        @include display_mixin(grid, 1fr, 1fr, 0);
+      }
+
+      .my-projects .carousel {
+        width: 270px;
+      }
+    }
+
+    .work-plan .steps-of-work {
+      @include display_mixin(grid, 1fr 1fr, 1fr, 0);
+    }
+  }
+}
