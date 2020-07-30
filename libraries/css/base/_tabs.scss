@@ -12,7 +12,7 @@
   &__nav {
     @include display_flex_mixin(column);
 
-    &_link {
+    &-link {
       padding: 10px 15px;
       width: 100%;
       cursor: pointer;
@@ -25,7 +25,7 @@
   }
 
   &__content {
-    &_pane {
+    &-pane {
       display: none;
       padding: 15px;
     }

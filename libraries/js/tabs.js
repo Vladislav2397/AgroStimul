@@ -1,5 +1,5 @@
-var nav_links = document.getElementsByClassName("tabs__nav_link");
-var content_panes = document.getElementsByClassName("tabs__content_pane");
+var nav_links = document.getElementsByClassName("tabs__nav-link");
+var content_panes = document.getElementsByClassName("tabs__content-pane");
 
 var navSwitch = function(digit) {
     digit--;
