@@ -1,17 +1,64 @@
 @media (max-width: 999px) and (min-width: 768px) {
   #home {
+    .intro {
+      .nav {
+        @include display_flex_mixin(column, center, center);
+        top: 0;
+        left: 0;
+        padding: 20px 0;
+        height: 500px;
+        transform: translateX(100%);
+        transition: 0.5s;
+  
+        &__link {
+          width: 50%;
+          padding: 20px;
+
+          &:hover {
+            background: #fff;
+          }
+
+          &::after, &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .burger {
+      display: flex;
+    }
+
     .company {
       @include wrapper(80%);
     }
 
     .our-works {
-
       .achivements {
         @include display_mixin(grid, 1fr 1fr, 1fr, 0px);
       }
   
       .my-projects .carousel {
         width: 270px * 2;
+      }
+    }
+
+    .contacts {
+      padding: 0;
+      @include wrapper(100%);
+
+      .content {
+        padding: 50px 0;
+      }
+      
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
+
+      .content {
+        @include display_mixin(grid, 100%, 1fr, 0);
+        @include wrapper(90%);
       }
     }
   }

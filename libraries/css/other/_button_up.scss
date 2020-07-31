@@ -1,12 +1,17 @@
 #button-up {
   position: fixed;
   display: none;
-  bottom: 0px;
-  right: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  width: 75px;
+  height: 75px;
   background: $GREEN;
   opacity: .7;
-  border-radius: 50% 50% 0 0;
-  padding: 15px;
+  border-radius: 50% 0 0 0;
+  padding: 10px;
   color: white;
   font-size: 20px;
   text-align: center;

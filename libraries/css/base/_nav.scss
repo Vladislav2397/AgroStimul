@@ -14,6 +14,7 @@
 		padding-right: 40px;
 		height: 100%;
 		font-weight: 600;
+		text-transform: uppercase;
     @include display_flex_mixin(row, center, center);
 		overflow: hidden;
 		position: relative;
@@ -50,4 +51,4 @@
 	z-index: 100;
 	top: 0;
 	left: 0;
-  }
+}

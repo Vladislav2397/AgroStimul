@@ -1,27 +1,58 @@
-@media (max-width: 767px) and (min-width: 375px) {
+@media (max-width: 767px) and (min-width: 350px) {
 
   .brand {
     font-size: 54px;
   }
 
   #home {
+    background-position: 25% 50%;
 
-    .intro .header span {
-      font-size: 15px;
+    .intro {
 
-      &:last-child {
-        font-size: 13px;
-      }
-    }
-
-    .intro .short-info {
-      bottom: 200px;
-
-      &__item {
+      .header span {
         font-size: 15px;
+  
+        &:last-child {
+          font-size: 13px;
+        }
+      }
+
+      .short-info {
+        &__item {
+          font-size: 15px;
+        }
+      }
+
+      .nav {
+        @include display_flex_mixin(column, center, center);
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px 0;
+        height: 100%;
+        transform: translateX(100%);
+        transition: 0.5s;
+  
+        &__link {
+          max-width: 100%;
+          min-width: 75%;
+          padding: 20px 0;
+
+          &:hover {
+            background: #fff;
+          }
+
+          &::after, &::before {
+            display: none;
+          }
+        }
       }
     }
-    
+
+    .burger {
+      display: flex;
+    }
+
     .company {
       @include wrapper(90%);
     }
@@ -37,7 +68,44 @@
     }
 
     .work-plan .steps-of-work {
-      @include display_mixin(grid, 1fr 1fr, 1fr, 0);
+      @include display_mixin(grid, 1fr 1fr, 1fr, 10px);
     }
+
+    .contacts {
+      @include wrapper(100%);
+      padding: 0 !important;
+      
+      h1 {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .content {
+        @include display_mixin(grid, 100%, 1fr, 0);
+        @include wrapper(90%);
+
+        .company-info {
+          @include display_mixin(grid, 1fr 1fr, repeat(3, 30px), 10px);
+        }
+
+        .user-info {
+          width: 100%;
+
+          &__field:not(.btn) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  #button-up {
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50% 0 0 0;
   }
 }

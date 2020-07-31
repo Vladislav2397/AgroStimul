@@ -13,7 +13,7 @@ window.onscroll = function() {
 
     // Button 'up'
     if (window.pageYOffset > 500) {
-        buttonUp.style.display = "block";
+        buttonUp.style.display = "flex";
     } else {
         buttonUp.style.display = "none";
     }

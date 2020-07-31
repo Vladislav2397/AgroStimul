@@ -1,0 +1,11 @@
+// @media (max-height: 1024px) and (min-height: 1px) and (min-width: 500px) and (max-width: 1024px) {
+//   #home .intro .short-info {
+//     top: 250px;
+//   }
+// }
+
+@media (max-height: 1024px) and (min-height: 500px) {
+  #home .intro .short-info {
+    bottom: 300px;
+  }
+}

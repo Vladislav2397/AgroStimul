@@ -31,6 +31,9 @@
       <a class="nav__link" href="equipment.html">Оборудование</a>
       <a class="nav__link" href="#">Услуги</a>
     </nav>
+    <span class="burger" onclick="toggleNav()">
+      <span class="burger__btn"></span>
+    </span>
 
   </section>
 
@@ -72,30 +75,30 @@
     <h2 class="brand-plain">МЫ ЗНАЕМ КАК СОЗДАВАТЬ ПРИБЫЛЬНЫЕ ПРОИЗВОДСТВА</h2>
     <div class="achivements">
       <div class="achivements__item">
-        <div class="achivements__item--icon">10</div>
-        <div class="achivements__item--info">
+        <div class="achivements__item-icon">10</div>
+        <div class="achivements__item-info">
           Более 10 лет работаем на рынке разработки и производства оборудования для пищевой промышленности сельского хозяйства
         </div>
       </div>
       <div class="achivements__item">
-        <div class="achivements__item--icon plane">
+        <div class="achivements__item-icon plane">
           <img src="images/icon_plane.png" alt="Image">
         </div>
-        <div class="achivements__item--info">
+        <div class="achivements__item-info">
           Собственное проектно-конструкторское  бюро, с 2005 года ведутся НИОКР
         </div>
       </div>
       <div class="achivements__item">
-        <div class="achivements__item--icon">56</div>
-        <div class="achivements__item--info">
+        <div class="achivements__item-icon">56</div>
+        <div class="achivements__item-info">
           56 завершенных проектов
         </div>
       </div>
       <div class="achivements__item">
-        <div class="achivements__item--icon">
+        <div class="achivements__item-icon">
           <img src="images/icon_setting.png" alt="Image">
         </div>
-        <div class="achivements__item--info">
+        <div class="achivements__item-info">
           В наших мини-заводах применяются уникальные технологии, которые не имеют аналогов в мире
         </div>
       </div>
@@ -189,40 +192,52 @@
     </div>
     <span class="end-step">Вы получаете готовое предприятие по производству высокодоходных продуктов питания 21 века!</span>
   </section>
+  
+  <div class="separator--bold"></div>
 
   <section class="contacts">
+    
     <h1>Контакты</h1>
+
     <div class="content">
-      <div class="my-info">
-        <table class="my-table-info">
-          <tr>
-            <td>Телефон</td>
-            <td>+7 (8332) 714-424</td>
-          </tr>
-          <tr>
-            <td>E-mail</td>
-            <td>usadba.asp@yandex.ru</td>
-          </tr>
-          <tr>
-            <td>Офис продаж</td>
-            <td>Киров, Труда 71а</td>
-          </tr>
-        </table>
+
+      <div class="company-info">
+        <div class="company-info__label">
+          Телефон
+        </div>
+        <div class="company-info__content">
+          +7 (8332) 714-424
+        </div>
+
+        <div class="company-info__label">
+          E-mail
+        </div>
+        <div class="company-info__content">
+          usadba.asp@yandex.ru
+        </div>
+
+        <div class="company-info__label">
+          Офис продаж
+        </div>
+        <div class="company-info__content">
+          Киров, Труда 71а
+        </div>
       </div>
-      <form action="" method="POST" class="user-info">
-        <label for="form-name">Имя</label>
-        <input id="form-name" name="name" type="text">
-        <label for="form-email">E-mail</label>
-        <input id="form-email" name="email" type="text">
-        <label for="form-message">Ваше сообщение</label>
-        <textarea id="form-message" name="message" cols="30" rows="5"></textarea>
+
+      <form method="POST" class="user-info">
+        <label for="form-name" class="user-info__label">Имя</label>
+        <input id="form-name" name="name" type="text" class="user-info__field">
+        <label for="form-email" class="user-info__label">E-mail</label>
+        <input id="form-email" name="email" type="text" class="user-info__field">
+        <label for="form-message" class="user-info__label">Ваше сообщение</label>
+        <textarea class="user-info__field" id="form-message" name="message" cols="30" rows="5"></textarea>
+        <input type="submit" name="submit" id="btn-submit" class="user-info__field btn" value="Отправить">
       </form>
-      
-    </div>
-    <div class="submit">
-      <button>Отправить</button>
+
     </div>
   </section>
+
+  <div class="separator--bold"></div>
 
   <a id="button-up" href="#">
     <i class="fas fa-arrow-up"></i><br>
@@ -231,6 +246,7 @@
 
   <script src="libraries/js/fixedNav.js"></script>
   <script src="libraries/js/carousel.js"></script>
+  <script src="libraries/js/burgerNav.js"></script>
 
 </body>
 </html>
