@@ -1,11 +1,5 @@
 @media (max-width: 1199px) and (min-width: 1000px) {
   #home {
-    .intro {
-      .short-info {
-        top: 200px;
-      }
-    }
-
     .company {
       @include wrapper(85%);
     }

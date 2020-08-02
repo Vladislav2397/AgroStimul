@@ -24,7 +24,7 @@
 
 .short-info {
 	position: absolute;
-	bottom: 130px;
+	top: 400px;
 	left: 40px;
   @include display_flex_mixin(column, center);
 
