@@ -1799,29 +1799,4 @@
   display: -ms-flexbox;
   display: flex;
 }
-
-/*
-@import
-  "base/nav",
-  "base/catalog",
-  "base/tabs",
-  "base/articles";
-
-@import
-  "home/home";
-
-@import
-  "mini-factories/mini-factories";
-
-@import 
-  "other/button_up",
-  "other/burger";
-
-@import
-  "layouts/decktop",
-  "layouts/tablet_l",
-  "layouts/tablet_s",
-  "layouts/phone",
-  "layouts/height";
-*/
 /*# sourceMappingURL=main.css.map */
