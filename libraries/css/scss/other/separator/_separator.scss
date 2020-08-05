@@ -1,0 +1,13 @@
+.separator {
+  &__simple {
+    width: 100%;
+    height: 2px;
+    background: $main-color;
+  }
+
+  &__bold {
+    width: 100%;
+    height: 75px;
+    background: $main-color;
+  }
+}

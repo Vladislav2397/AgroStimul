@@ -1,0 +1,40 @@
+.burger {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: $main-color;
+  width: 75px;
+  height: 75px;
+  border-radius: 0 0 0 50%;
+  opacity: 0.7;
+  z-index: 10;
+
+  &__btn {
+    border: none;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    top: calc(50% - 1.5px);
+    left: calc(50% - 15px);
+
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background: #fff;
+      top: -8px;
+      left: 0;
+    }
+
+    &::before {
+      top: 8px;
+    }
+  }
+
+  @include media-screen($screen-lg - 4px) {
+    display: flex;
+  }
+}

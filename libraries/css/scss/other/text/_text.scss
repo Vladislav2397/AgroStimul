@@ -1,0 +1,47 @@
+.text {
+  font-size: $font-md;
+
+  &__brand {
+    font-family: 'Kobzak';
+    font-size: $font-brand-md;
+    font-weight: bold;
+
+    &--small {
+      font-size: $font-brand-sm;
+    }
+
+    @include media-screen($screen-md) {
+      font-size: $font-brand-sm;
+    }
+  }
+
+  &__title {
+    font-size: $font-title;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__plain {
+    font-size: $font-lg;
+    
+    &--italic {
+      font-style: italic;
+    }
+
+    &--bold {
+      font-weight: bold;
+    }
+
+    &--small {
+      font-size: $font-md;
+    }
+
+    &--smaller {
+      font-size: $font-sm;
+    }
+  }
+}

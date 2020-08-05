@@ -1,0 +1,22 @@
+.page-equipment-product {
+  &__nav {
+    height: 60px;
+    width: 100%;
+  }
+
+  &__title {
+    margin: 30px 0;
+  }
+
+  &__catalog {
+    width: 100%;
+  }
+
+  @include media-screen(xl) {
+    @include wrapper($screen-xl);
+  }
+
+  @import
+    "../other/nav/nav",
+    "../other/catalog/catalog";
+}

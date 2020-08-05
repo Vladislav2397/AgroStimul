@@ -1,0 +1,15 @@
+.short-info {
+  &__item {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+
+    @include media-screen($screen-md) {
+      font-size: $font-md;
+    }
+  }
+}

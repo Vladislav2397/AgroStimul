@@ -409,7 +409,7 @@ section {
 
 #home .short-info {
   position: absolute;
-  bottom: 130px;
+  top: 400px;
   left: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,6 +672,7 @@ section {
   z-index: 10;
   opacity: 0.5;
   top: 50%;
+  outline: none;
   cursor: pointer;
 }
 
@@ -698,11 +699,15 @@ section {
           flex: 0 0 auto;
   width: 250px;
   height: 150px;
-  background: #eee;
+  background: #333;
   margin: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -863,6 +868,7 @@ section {
   background: transparent;
   padding: 10px;
   border-radius: 10px;
+  outline: none;
 }
 
 #home .user-info__label {
@@ -892,6 +898,10 @@ section {
 #home .user-info .btn:hover {
   background: #12601e;
   color: #fff;
+}
+
+.page-mini-factories {
+  margin-top: 50px;
 }
 
 #button-up {
@@ -944,6 +954,7 @@ section {
   left: calc(50% - 15px);
   width: 30px;
   height: 3px;
+  border: none;
   background: #fff;
 }
 
@@ -975,9 +986,6 @@ section {
 }
 
 @media (max-width: 1199px) and (min-width: 1000px) {
-  #home .intro .short-info {
-    top: 200px;
-  }
   #home .company {
     width: 85%;
     margin: auto;
@@ -1010,7 +1018,7 @@ section {
   }
   #home .intro .nav__link {
     width: 50%;
-    padding: 20px;
+    padding: 10px 0;
   }
   #home .intro .nav__link:hover {
     background: #fff;
@@ -1097,7 +1105,7 @@ section {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px 0;
+    padding: 10px 0;
     height: 100%;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -1191,9 +1199,21 @@ section {
   }
 }
 
-@media (max-height: 1024px) and (min-height: 500px) {
+@media (max-height: 499px) and (min-height: 1px) {
   #home .intro .short-info {
-    bottom: 300px;
+    bottom: 30px;
+  }
+}
+
+@media (max-height: 767px) and (min-height: 500px) {
+  #home .intro .short-info {
+    top: 300px;
+  }
+}
+
+@media (max-height: 1024px) and (min-height: 768px) {
+  #home .intro .short-info {
+    top: 400px;
   }
 }
 /*# sourceMappingURL=myNewStyle.css.map */

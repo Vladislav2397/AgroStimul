@@ -1,0 +1,43 @@
+.contacts {
+  margin-top: 100px;
+
+  &__header {
+    @include media-screen(sm) {
+      text-align: center;
+    }
+  }
+
+  &__inner {
+    @include wrapper(90%);
+
+    @include media-screen(xl) {
+      width: 60%;
+    }
+
+    @include media-screen(md) {
+      width: 90%;
+    }
+  }
+
+  &__header {
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    grid-gap: 50px;
+    margin: 20px 0;
+
+    @include media-screen($screen-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @import 
+    "info-table/info-table",
+    "form/form";
+
+  @import "../../other/separator/separator";
+}

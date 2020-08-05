@@ -4,242 +4,272 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
-  <link rel="stylesheet" href="libraries/css/myNewStyle.css">
+  <link rel="stylesheet" href="libraries/css/main.css">
   <title>Agro Stimul</title>
 </head>
-<body id="home">
+<body id="home" class="page-home">
 
-  <section class="intro">
-    <header class="header">
-      <span>Группа компаний</span>
-      <h2 class="brand">Продукты 21 века</h2>
-      <span>Разработка и поставка<br>мини-заводов под ключ</span>
-    </header>
-    <div class="short-info">
-      <div class="short-info__item">
-        Рентабельность инвестиций <br> больше 300%
+
+  <!-- =============== INTRO =============== -->
+
+  <div class="page-home__section intro">
+    <div class="page-home__wrapper intro__inner">
+      <div class="text">
+        <div class="intro__subtitle text__plain text__plain--bold">
+          Группа компаний
+        </div>
+        <div class="intro__title text__brand">
+          Продукты 21 века
+        </div>
+        <div class="intro__subtitle text__plain text__plain--small">
+          Разработка и поставка<br>
+          мини-заводов под ключ
+        </div>
       </div>
-      <div class="short-info__item">
-        Стабильный бизнес на вечном <br> рынке продуктов  питания
+      <div class="intro__short-info short-info">
+        <div class="short-info__item">
+          Рентабельность инвестиций<br>больше 300%
+        </div>
+        <div class="short-info__item">
+          Стабильный бизнес на вечном<br>рынке продуктов  питания
+        </div>
       </div>
+
+      <nav class="intro__nav nav">
+        <a class="nav__link" href="index.html">Главная</a>
+        <a class="nav__link" href="mini-factories.html">Мини-заводы</a>
+        <a class="nav__link" href="products.html">Продукты 21 века</a>
+        <a class="nav__link" href="equipment.html">Оборудование</a>
+        <a class="nav__link" href="#">Услуги</a>
+      </nav>
+      <a class="burger" onclick="toggleNav()">
+        <button class="burger__btn"></button>
+      </a>
     </div>
+  </div>
 
-    <nav class="nav">
-      <a class="nav__link" href="index.html">Главная</a>
-      <a class="nav__link" href="#">Мини-заводы</a>
-      <a class="nav__link" href="products.html">Продукты 21 века</a>
-      <a class="nav__link" href="equipment.html">Оборудование</a>
-      <a class="nav__link" href="#">Услуги</a>
-    </nav>
-    <span class="burger" onclick="toggleNav()">
-      <span class="burger__btn"></span>
-    </span>
 
-  </section>
+  <!-- =============== COMPANY =============== -->
 
-  <section class="company">
-    <h2 class="brand">Продукты 21 века</h2>
-    <div class="company__about">
-      <p class="plain-text">
-        <b>Проект «Продукты – 21 века»</b> - это воплощение Вашей Мечты о современном высокотехнологичном и сверхприбыльном бизнесе.  Мы проектируем для Вас и ставим под ключ заводы по производству новых продуктов  питания с высокой добавленной стоимостью.
+  <div class="company">
+    <div class="company__header">
+      <span class="text__brand">Продукты 21 века</span>
+    </div>
+    
+    <div class="company__info">
+      <p class="text__plain">
+        <b class="text__plain">Проект «Продукты – 21 века»</b> - это воплощение Вашей Мечты о современном высокотехнологичном и сверхприбыльном бизнесе.  Мы проектируем для Вас и ставим под ключ заводы по производству новых продуктов  питания с высокой добавленной стоимостью.
       </p>
-      <p class="plain-text">
+      <p class="text__plain">
         Вы получаете готовое предприятие по производству  высокодоходных инновационных продуктов питания  с высокой конкурентной способностью. Это продукты 21 века, которые отвечают всем современным требованиям и подходам к здоровью человека.
       </p>
-      <p class="plain-text">
-        <b>Мини - заводы</b> – это уникальные  технологии переработки  растительного сырья в продукцию с высокой добавленной стоимостью от 300 до 1000%. Это технологический трансформер, который позволяет расширять линейку новых продуктов в несколько раз.
+      <p class="text__plain">
+        <b class="text__plain">Мини - заводы</b> – это уникальные  технологии переработки  растительного сырья в продукцию с высокой добавленной стоимостью от 300 до 1000%. Это технологический трансформер, который позволяет расширять линейку новых продуктов в несколько раз.
       </p>
     </div>
 
-    <div class="company-links">
-      <div class="company-links__background">
+    <div class="company__links company-links">
+      <div class="company-links__wrapper">
         <a class="company-links__link" href="#">Переработка натурального молока</a>
       </div>
-      <div class="company-links__background">
+      <div class="company-links__wrapper">
         <a class="company-links__link" href="#">Производство Заменителей цельного молока из растительного сырья</a>
       </div>
-      <div class="company-links__background">
+      <div class="company-links__wrapper">
         <a class="company-links__link" href="#">Производство продуктов для животных</a>
       </div>
     </div>
 
-    <div class="arrow-bottom">
-      <i class="fas fa-chevron-down"></i>
-      <i class="fas fa-chevron-down"></i>
-      <i class="fas fa-chevron-down"></i> 
+    <div class="company__arrows">
+      <i class="arrow fas fa-chevron-down"></i>
+      <i class="arrow fas fa-chevron-down"></i>
+      <i class="arrow fas fa-chevron-down"></i>
     </div>
-    
-  </section>
+  </div>
 
-  <section class="our-works">
-    <h2 class="brand-plain">МЫ ЗНАЕМ КАК СОЗДАВАТЬ ПРИБЫЛЬНЫЕ ПРОИЗВОДСТВА</h2>
-    <div class="achivements">
+
+  <!-- =============== OUR-WORK =============== -->
+
+  <div class="our-work">
+    <div class="text">
+      <div class="text__title text__title--center">Мы знаем как создавать прибыльные производства</div>
+    </div>
+    <div class="our-work__achivements achivements">
       <div class="achivements__item">
-        <div class="achivements__item-icon">10</div>
-        <div class="achivements__item-info">
+        <div class="achivements__icon">
+          10
+        </div>
+        <div class="achivements__content">
           Более 10 лет работаем на рынке разработки и производства оборудования для пищевой промышленности сельского хозяйства
         </div>
       </div>
       <div class="achivements__item">
-        <div class="achivements__item-icon plane">
+        <div class="achivements__icon plane">
           <img src="images/icon_plane.png" alt="Image">
         </div>
-        <div class="achivements__item-info">
+        <div class="achivements__content">
           Собственное проектно-конструкторское  бюро, с 2005 года ведутся НИОКР
         </div>
       </div>
       <div class="achivements__item">
-        <div class="achivements__item-icon">56</div>
-        <div class="achivements__item-info">
+        <div class="achivements__icon">
+          56
+        </div>
+        <div class="achivements__content">
           56 завершенных проектов
         </div>
       </div>
       <div class="achivements__item">
-        <div class="achivements__item-icon">
+        <div class="achivements__icon">
           <img src="images/icon_setting.png" alt="Image">
         </div>
-        <div class="achivements__item-info">
+        <div class="achivements__content">
           В наших мини-заводах применяются уникальные технологии, которые не имеют аналогов в мире
         </div>
       </div>
     </div>
-    <h2 class="brand-plain">РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h2>
-    <div class="my-projects">
-      <div class="carousel">
-        <button class="btn btn--left" onclick='carouselSlide("left")'>
-          <i class="fas fa-angle-left"></i>
-        </button>
-        <div class="carousel-item">1</div>
-        <div class="carousel-item">2</div>
-        <div class="carousel-item">3</div>
-        <div class="carousel-item">4</div>
-        <div class="carousel-item">5</div>
-        <div class="carousel-item">6</div>
-        <button class="btn btn--right" onclick='carouselSlide("right")'>
-          <i class="fas fa-angle-right"></i>
-        </button>
+
+    <div class="our-work__header text">
+      <div class="text__title text__title--center">
+        Реализованные проекты
       </div>
     </div>
-  </section>
 
-  <section class="work-plan">
-    <h2 class="brand-plain">КАК МЫ РАБОТАЕМ</h2>
-    <div class="steps-of-work">
-      <div class="steps-of-work__item">
-        <div class="steps-of-work__item-image">
+    <div class="our-work__carousel carousel">
+      <button class="carousel__btn btn btn__left">
+        <i class="fas fa-angle-left"></i>
+      </button>
+      <div class="carousel__item">1</div>
+      <div class="carousel__item">2</div>
+      <div class="carousel__item">3</div>
+      <div class="carousel__item">4</div>
+      <div class="carousel__item">5</div>
+      <div class="carousel__item">6</div>
+      <button class="carousel__btn btn btn__right"'>
+        <i class="fas fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- =============== WORK-PLAN =============== -->
+
+  <div class="work-plan">
+    <div class="work-plan__header text">
+      <div class="text__title text__title--center">
+        Как мы работаем
+      </div>
+    </div>
+    <div class="work-plan__steps-work steps-work">
+      <div class="steps-work__item">
+        <div class="steps-work__image">
           <img src="" alt="">
         </div>
-        <div class="steps-of-work__item-info">
+        <div class="steps-work__content">
           Вы оставляете заявку
         </div>
       </div>
-      <div class="steps-of-work__item">
-        <div class="steps-of-work__item-image">
+      <div class="steps-work__item">
+        <div class="steps-work__image">
           <img src="" alt="">
         </div>
-        <div class="steps-of-work__item-info">
+        <div class="steps-work__content">
           Мы обсуждаем и совместно разрабатываем ТЗ  под Ваше здание и Ваши задачи
         </div>
       </div>
-      <div class="steps-of-work__item">
-        <div class="steps-of-work__item-image">
+      <div class="steps-work__item">
+        <div class="steps-work__image">
           <img src="" alt="">
         </div>
-        <div class="steps-of-work__item-info">
+        <div class="steps-work__content">
           После утверждения ТЗ мы  подписываем договор
         </div>
       </div>
-      <div class="steps-of-work__item">
-        <div class="steps-of-work__item-image">
+      <div class="steps-work__item">
+        <div class="steps-work__image">
           <img src="" alt="">
         </div>
-        <div class="steps-of-work__item-info">
-          Вы вносите частичную предоплату по договору 
+        <div class="steps-work__content">
+          Вы вносите частичную предоплату по договору
         </div>
       </div>
-      <div class="steps-of-work__item">
-        <div class="steps-of-work__item-image">
+      <div class="steps-work__item">
+        <div class="steps-work__image">
           <img src="" alt="">
         </div>
-        <div class="steps-of-work__item-info">
+        <div class="steps-work__content">
           Мы выполняем технологическую часть проекта и производим оборудование
         </div>
       </div>
-      <div class="steps-of-work__item">
-        <div class="steps-of-work__item-image">
+      <div class="steps-work__item">
+        <div class="steps-work__image">
           <img src="" alt="">
         </div>
-        <div class="steps-of-work__item-info">
+        <div class="steps-work__content">
           После готовности оборудования Вы оплачиваете остальную часть по договору
         </div>
       </div>
-      <div class="steps-of-work__item">
-        <div class="steps-of-work__item-image">
+      <div class="steps-work__item">
+        <div class="steps-work__image">
           <img src="" alt="">
         </div>
-        <div class="steps-of-work__item-info">
+        <div class="steps-work__content">
           После поставки оборудования мы производим монтаж и пуско-наладочные работы
         </div>
       </div>
-      <div class="steps-of-work__item">
-        <div class="steps-of-work__item-image">
+      <div class="steps-work__item">
+        <div class="steps-work__image">
           <img src="" alt="">
         </div>
-        <div class="steps-of-work__item-info">
+        <div class="steps-work__content">
           Подписываем акты о выполненных работах
         </div>
       </div>
     </div>
-    <span class="end-step">Вы получаете готовое предприятие по производству высокодоходных продуктов питания 21 века!</span>
-  </section>
-  
-  <div class="separator--bold"></div>
+    <div class="work-plan__footer">Вы получаете готовое предприятие по производству высокодоходных продуктов питания 21 века!</div>
+  </div>
 
-  <section class="contacts">
-    
-    <h1>Контакты</h1>
 
-    <div class="content">
+  <!-- =============== CONTACTS =============== -->
 
-      <div class="company-info">
-        <div class="company-info__label">
-          Телефон
-        </div>
-        <div class="company-info__content">
-          +7 (8332) 714-424
-        </div>
+  <div class="page-home__section contacts">
+    <div class="separator__bold"></div>
+    <div class="contacts__inner">
 
-        <div class="company-info__label">
-          E-mail
-        </div>
-        <div class="company-info__content">
-          usadba.asp@yandex.ru
-        </div>
-
-        <div class="company-info__label">
-          Офис продаж
-        </div>
-        <div class="company-info__content">
-          Киров, Труда 71а
+      <div class="contacts__header text">
+        <div class="text__title">
+          Контакты
         </div>
       </div>
 
-      <form method="POST" class="user-info">
-        <label for="form-name" class="user-info__label">Имя</label>
-        <input id="form-name" name="name" type="text" class="user-info__field">
-        <label for="form-email" class="user-info__label">E-mail</label>
-        <input id="form-email" name="email" type="text" class="user-info__field">
-        <label for="form-message" class="user-info__label">Ваше сообщение</label>
-        <textarea class="user-info__field" id="form-message" name="message" cols="30" rows="5"></textarea>
-        <input type="submit" name="submit" id="btn-submit" class="user-info__field btn" value="Отправить">
-      </form>
+      <div class="contacts__content">
+        <div class="info-table">
+          <div class="info-table__header">Телефон</div>
+          <div class="info-table__content">+7 (8332) 714-424</div>
+          <div class="info-table__header">E-mail</div>
+          <div class="info-table__content">usadba.asp@yandex.ru</div>
+          <div class="info-table__header">Офис продаж</div>
+          <div class="info-table__content">Киров, Труда 71а</div>
+        </div>
+        <form method="POST" class="contacts__form form">
+          <div class="form__row">
+            <input class="form__field" id="form-name" type="text" name="form-name" placeholder="Имя" />
+            <input class="form__field" id="form-email" type="email" name="form-email" placeholder="E-mail" />
+          </div>
+          <div class="form__row">
+            <textarea class="form__field form__area" name="form-msg" id="form-msg" placeholder="Ваше сообщение"></textarea>
+          </div>
+          <div class="form__row form__row--end">
+            <input class="form__field form__btn" type="submit" value="Отправить" />  
+          </div>
+        </form>
+      </div>
 
     </div>
-  </section>
+    <div class="separator__bold"></div>
+  </div>
 
-  <div class="separator--bold"></div>
-
-  <a id="button-up" href="#">
+  <a class="button-up" href="#">
     <i class="fas fa-arrow-up"></i><br>
     Наверх
   </a>
@@ -247,6 +277,7 @@
   <script src="libraries/js/fixedNav.js"></script>
   <script src="libraries/js/carousel.js"></script>
   <script src="libraries/js/burgerNav.js"></script>
+  <script src="libraries/js/buttonUp.js"></script>
 
 </body>
 </html>

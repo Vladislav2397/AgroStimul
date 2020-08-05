@@ -1,0 +1,16 @@
+.our-work {
+  @include wrapper(90%);
+  margin: 50px auto;
+
+  &__carousel {
+    margin: 20px auto;
+  }
+
+  @include media-screen(xl) {
+    @include wrapper($screen-lg);
+  }
+
+  @import "achivements/achivements";
+
+  @import "../../other/carousel/carousel";
+}

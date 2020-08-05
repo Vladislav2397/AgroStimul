@@ -1,0 +1,44 @@
+.menu-catalog {
+  @include display_grid_mixin(1fr, 1fr);
+
+  &__link {
+    font-size: $font-sm;
+    padding: 15px 20px;
+    width: 100%;
+    border-bottom: 1px solid $main-color;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      transition: 0.3s;
+      color: #fff;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $main-color;
+      transition: 0.5s;
+      transform: translateX(-100%);
+      z-index: -1;
+    }
+
+    &:hover::before {
+      transform: translateX(0);
+      color: #fff;
+    }
+
+    &--active {
+      background: $main-color;
+      color: #fff;
+    }
+  }
+}

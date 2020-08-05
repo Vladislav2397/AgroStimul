@@ -1,0 +1,19 @@
+.work-plan {
+  margin-top: 100px;
+
+  &__steps-work {
+    @include wrapper(90%);
+  }
+
+  &__footer {
+    @include wrapper(80%);
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  @include media-screen(xl) {
+    @include wrapper($screen-lg);
+  }
+
+  @import "steps-work/steps-work";
+}

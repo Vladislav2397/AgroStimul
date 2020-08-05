@@ -68,6 +68,7 @@
         z-index: 10;
         opacity: 0.5;
         top: 50%;
+        outline: none;
         cursor: pointer;
 
         &:hover {
@@ -87,16 +88,14 @@
           color: white;
         }
       }
-  
+
       .carousel-item {
         flex: 0 0 auto;
         width: 250px;
         height: 150px;
-        background: $light-gray;
+        background: #333;
         margin: 0 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display_flex_mixin(row, center, center);
         z-index: 5;
         transition: 0.5s;
       }
