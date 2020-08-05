@@ -1,0 +1,77 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  &__row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    grid-gap: 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+
+    &--end {
+      justify-content: flex-end;
+    }
+
+    @include media-screen(sm) {
+      @include wrapper(70%);
+      min-width: 350px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    @include media-screen($screen-sm) {
+      @include wrapper(90%);
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__field {
+    font-size: 1.6rem;
+    border: 1px solid $main-color;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 0 20px;
+
+    @include media-screen(md) {
+      width: 100%;
+    }
+  }
+
+  &__area {
+    grid-column: 1 / 3;
+    height: 75px;
+
+    @include media-screen(sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / 3;
+    justify-self: end;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 150px;
+    transition: 0.5s;
+
+    &:hover {
+      background: $main-color;
+      color: #fff;
+    }
+
+    @include media-screen($screen-md) {
+      justify-self: center;
+    }
+  }
+
+  @include media-screen(sm) {
+    justify-self: center;
+  }
+}

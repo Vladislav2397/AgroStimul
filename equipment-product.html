@@ -3,113 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="libraries/css/myNewStyle.css">
+  <link rel="stylesheet" href="libraries/css/main.css">
   <title>Мини-Заводы</title>
 </head>
-<body id="factories">
+<body class="page-equipment-product">
   
-  <section class="header">
-    <nav class="nav fixed">
+  <div class="page-equipment-product__nav">
+    <nav class="nav nav__fixed">
       <a class="nav__link" href="index.html">Главная</a>
       <a class="nav__link" href="mini-factories.html">Мини-заводы</a>
       <a class="nav__link" href="products.html">Продукты 21 века</a>
       <a class="nav__link" href="equipment.html">Оборудование</a>
       <a class="nav__link" href="#">Услуги</a>
     </nav>
-  </section>
+    <a class="burger" onclick="toggleNav()">
+      <button class="burger__btn"></button>
+    </a>
+  </div>
 
-  <section>
-    <h2 class="brand-plain">Элемент каталога</h2>
+  <div class="page-equipment-product__content">
+    <div class="page-equipment-product__title text__title text__title--center">Название элемента 1</div>
 
-    <div class="catalog">
-      
-      <ul class="catalog__menu">
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="equipment.html">
-            Название элемента
-          </a>
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="equipment.html">
-            Название элемента
-          </a>
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="equipment.html">
-            Название элемента
-          </a> 
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="equipment.html">
-            Название элемента
-          </a> 
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="equipment.html">
-            Название элемента
-          </a> 
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="equipment.html">
-            Название элемента
-          </a> 
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="equipment.html">
-            Название элемента
-          </a> 
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="equipment.html">
-            Название элемента
-          </a> 
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="equipment.html">
-            Название элемента
-          </a> 
-        </li>
-      </ul>
+    <div class="page-equipment-product__catalog catalog">
 
-      <div class="catalog__product">
-        <div class="catalog__product-image no-border">
-          <img src="images/oborudovanie/1.jpg" alt="Image">
+      <div class="catalog__menu menu-catalog">
+        <a class="menu-catalog__link menu-catalog__link--active" href="equipment.html">
+          Название элемента 1
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 2
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 3
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 4
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 1
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 2
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 3
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 4
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 1
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 2
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 3
+        </a>
+        <a class="menu-catalog__link" href="equipment.html">
+          Название элемента 4
+        </a>
+      </div>
+
+      <div class="catalog__product product-catalog">
+        <div class="product-catalog__wrapper">
+          <img class="product-catalog__image" src="images/oborudovanie/1.jpg" alt="Image">
         </div>
 
-        <div class="catalog__product-tabs tabs">
-          
+        <div class="product-catalog__title text">
+          <div class="text__plain text__plain--bold text__plain--large">Title</div>
+        </div>
+
+        <div class="product-catalog__tabs tabs">
           <div class="tabs__nav">
-            <a onclick="navSwitch(1)" class="tabs__nav-link active">
+            <a class="tabs__link tabs__link--active text__plain--small">
               Описание
             </a>
-            <a onclick="navSwitch(2)" class="tabs__nav-link">
+            <a class="tabs__link text__plain--small">
               Характеристики
             </a>
-            <a onclick="navSwitch(3)" class="tabs__nav-link">
+            <a class="tabs__link text__plain--small">
               Отзывы
             </a>
           </div>
-          
+
           <div class="tabs__content">
-            <div class="tabs__content-pane show" id="content-1">
+            <div class="tabs__pane tabs__pane--show text__plain--small" id="content-1">
               content 1
             </div>
-            <div class="tabs__content-pane" id="content-2">
+            <div class="tabs__pane text__plain--small" id="content-2">
               Характеристики
             </div>
-            <div class="tabs__content-pane" id="content-3">
+            <div class="tabs__pane text__plain--small" id="content-3">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, aut! Sapiente similique hic recusandae quibusdam nihil, sequi obcaecati cum eveniet non repellat eum sint minima voluptates laboriosam officia tenetur suscipit!
               Perspiciatis ad commodi tempora hic adipisci enim beatae repudiandae, nobis, rem sunt laborum? Ut necessitatibus optio placeat? Fuga ratione, aliquid eius nihil, perferendis eveniet praesentium, ex sit architecto quidem magni?
               Porro vel repellat, temporibus, voluptatem dolore sint debitis a quam hic non at cum nobis architecto tenetur molestiae aut nostrum ab alias praesentium. A tenetur quia corporis! Placeat, eligendi officia.
             </div>
           </div>
-
         </div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <a class="button-up" href="#">
+    <i class="fas fa-arrow-up"></i><br>
+    Наверх
+  </a>
 
   <script src="libraries/js/tabs.js"></script>
+  <script src="libraries/js/buttonUp.js"></script>
 
 </body>
 </html>

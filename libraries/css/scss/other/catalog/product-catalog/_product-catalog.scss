@@ -1,0 +1,23 @@
+.product-catalog {
+  @include display_flex_mixin(column);
+  width: 90%;
+
+  &__wrapper {
+    padding: 15px;
+  }
+
+  &__image {
+    width: 600px;
+  }
+
+  &__title {
+    padding: 20px;
+    width: 100%;
+  }
+
+  &__tabs {
+    width: 100%;
+  }
+
+  @import "../../tabs/tabs";
+}

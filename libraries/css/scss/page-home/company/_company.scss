@@ -1,0 +1,70 @@
+.company {
+  &__header {
+    margin: 30px 0;
+
+    @include media-screen($screen-md) {
+      margin-left: 15px;
+    }
+  }
+
+  &__info {
+    @import "text/text";
+  }
+  
+  &__links {
+    @include wrapper(80%);
+
+    @import "company-links/company-links";
+  }
+
+  &__arrows {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+
+    .arrow {
+      font-size: 15rem;
+      position: absolute;
+
+      &:nth-child(1) {
+        top: 0;
+        opacity: 0.5;
+      }
+
+      &:nth-child(2) {
+        top: 50px;
+        opacity: 0.6;
+      }
+
+      &:nth-child(3) {
+        top: 100px;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @include media-screen(xl) {
+    @include wrapper(50%);
+  }
+
+  @include media-screen(lg) {
+    @include wrapper(70%);
+  }
+
+  @include media-screen(md) {
+    @include wrapper(90%);
+  }
+
+  @include media-screen($screen-md) {
+    margin: 0 10px;
+
+    &__links {
+      @include wrapper(90%);
+    }
+  }
+}

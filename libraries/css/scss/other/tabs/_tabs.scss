@@ -1,0 +1,29 @@
+.tabs {
+  border: 1px solid #e0e0e0;
+  display: grid;
+  grid-template-columns: 20% 80%;
+
+  &__nav {
+    @include display_flex_mixin(column);
+  }
+
+  &__link {
+    padding: 10px 15px;
+    width: 100%;
+    cursor: pointer;
+
+    &--active {
+      background: $GREEN;
+      color: #fff;
+    }
+  }
+
+  &__pane {
+    display: none;
+    padding: 15px;
+
+    &--show {
+      display: flex;
+    }
+  }
+}

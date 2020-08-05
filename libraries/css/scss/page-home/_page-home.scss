@@ -1,0 +1,17 @@
+.page-home {
+  &__wrapper {
+    @include media-screen(xl) {
+      @include wrapper($screen-lg);
+    };
+  }
+
+  @import
+    "intro/intro",
+    "company/company",
+    "our-work/our-work",
+    "work-plan/work-plan",
+    "contacts/contacts";
+
+  @import
+    "../other/btn-up/button-up";
+}

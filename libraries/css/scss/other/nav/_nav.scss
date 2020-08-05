@@ -1,0 +1,81 @@
+.nav {
+  background: $main-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+
+  &__link {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 100%;
+    padding: 0 20px;
+    transition: 0.5s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      color: #000;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      background: #cccccc80;
+      transition: 0.5s;
+      border-radius: 0 0 20px 20px;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      height: 130%;
+    }
+
+    @include media-screen(xl) {
+      padding: 0 40px;
+    }
+  }
+
+  &__fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 10;
+  }
+
+  @include media-screen(xl) {
+    justify-content: space-evenly;
+  }
+
+  @include media-screen($screen-lg - 4px) {
+    flex-direction: column;
+    height: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    transition: 0.5s;
+    transform: translateX(100%);
+    
+    &__link {
+      &:hover {
+        background: #fff;
+      }
+
+      &::after, &::before {
+        display: none;
+      }
+    }
+  }
+}

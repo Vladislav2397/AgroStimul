@@ -3,74 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="libraries/css/myNewStyle.css">
+  <link rel="stylesheet" href="libraries/css/main.css">
   <title>Мини-Заводы</title>
 </head>
-<body id="factories" class="factories">
+<body class="page-equipment">
 
-  <section class="navbar">
-    <nav class="nav fixed">
+  <div class="page-equipment__nav">
+    <nav class="nav nav__fixed">
       <a class="nav__link" href="index.html">Главная</a>
       <a class="nav__link" href="mini-factories.html">Мини-заводы</a>
       <a class="nav__link" href="products.html">Продукты 21 века</a>
       <a class="nav__link" href="equipment.html">Оборудование</a>
       <a class="nav__link" href="#">Услуги</a>
     </nav>
-  </section>
+    <a class="burger" onclick="toggleNav()">
+      <button class="burger__btn"></button>
+    </a>
+  </div>
 
-  <section>
-    <h2 class="brand-plain">Каталог оборудования</h2>
+  <div class="page-equipment__content">
+    <div class="page-equipment__title text__title text__title--center">Каталог оборудования</div>
 
-    <div class="catalog">
+    <div class="page-equipment__catalog catalog">
       
-      <ul class="catalog__menu">
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="#">
-            Название элемента
-          </a>
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="#">
-            Название элемента
-          </a>
-        </li>
-        <li class="catalog__menu-item">
-          <a class="catalog__menu-link" href="#">
-            Название элемента
-          </a> 
-        </li>
-      </ul>
+      <div class="catalog__menu menu-catalog">
+        <a class="menu-catalog__link menu-catalog__link--active" href="#">
+          Название элемента 1
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 2
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 3
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 4
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 1
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 2
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 3
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 4
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 1
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 2
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 3
+        </a>
+        <a class="menu-catalog__link" href="#">
+          Название элемента 4
+        </a>
+      </div>
 
-      <div class="catalog__items">
-        <a href="equipment-product.html" class="catalog__items-item">
-          <div class="catalog__items-image">
-            <img src="images/oborudovanie/1.jpg" alt="Image">
+      <div class="catalog__items items-catalog">
+        <a href="equipment-product.html" class="items-catalog__item">
+          <div class="items-catalog__wrapper">
+            <img class="items-catalog__image" src="images/oborudovanie/1.jpg" alt="Image">
           </div>
-          <div class="catalog__items-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.</div>
-        </a>
-        <a href="equipment-product.html" class="catalog__items-item">
-          <div class="catalog__items-image">
-            <img src="images/oborudovanie/2.jpg" alt="Image">
-          </div>
-          <div class="catalog__items-info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+          <div class="items-catalog__info">
+            <span class="items-catalog__title text__plain--bold">Title</span>
+            <p class="items-catalog__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+            </p>
+            <span class="items-catalog__btn">Read more</span>
           </div>
         </a>
-        <a href="equipment-product.html" class="catalog__items-item">
-          <div class="catalog__items-image">
-            <img src="images/oborudovanie/3.jpeg" alt="Image">
+        <a href="equipment-product.html" class="items-catalog__item">
+          <div class="items-catalog__wrapper">
+            <img  class="items-catalog__image" src="images/oborudovanie/2.jpg" alt="Image">
           </div>
-          <div class="catalog__items-info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+          <div class="items-catalog__info">
+            <span class="items-catalog__title text__plain--bold">Title</span>
+            <p class="items-catalog__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <span class="items-catalog__btn">Read more</span>
+          </div>
+        </a>
+        <a href="equipment-product.html" class="items-catalog__item">
+          <div class="items-catalog__wrapper">
+            <img class="items-catalog__image" src="images/oborudovanie/3.jpeg" alt="Image">
+          </div>
+          <div class="items-catalog__info">
+            <span class="items-catalog__title text__plain--bold">Title</span>
+            <p class="items-catalog__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+            </p>
+            <span class="items-catalog__btn">Read more</span>
+          </div>
+        </a>
+        <a href="equipment-product.html" class="items-catalog__item">
+          <div class="items-catalog__wrapper">
+            <img class="items-catalog__image" src="images/oborudovanie/1.jpg" alt="Image">
+          </div>
+          <div class="items-catalog__info">
+            <span class="items-catalog__title text__plain--bold">Title</span>
+            <p class="items-catalog__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+            </p>
+            <span class="items-catalog__btn">Read more</span>
+          </div>
+        </a>
+        <a href="equipment-product.html" class="items-catalog__item">
+          <div class="items-catalog__wrapper">
+            <img  class="items-catalog__image" src="images/oborudovanie/2.jpg" alt="Image">
+          </div>
+          <div class="items-catalog__info">
+            <span class="items-catalog__title text__plain--bold">Title</span>
+            <p class="items-catalog__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <span class="items-catalog__btn">Read more</span>
+          </div>
+        </a>
+        <a href="equipment-product.html" class="items-catalog__item">
+          <div class="items-catalog__wrapper">
+            <img class="items-catalog__image" src="images/oborudovanie/3.jpeg" alt="Image">
+          </div>
+          <div class="items-catalog__info">
+            <span class="items-catalog__title text__plain--bold">Title</span>
+            <p class="items-catalog__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+            </p>
+            <span class="items-catalog__btn">Read more</span>
+          </div>
+        </a>
+        <a href="equipment-product.html" class="items-catalog__item">
+          <div class="items-catalog__wrapper">
+            <img class="items-catalog__image" src="images/oborudovanie/1.jpg" alt="Image">
+          </div>
+          <div class="items-catalog__info">
+            <span class="items-catalog__title text__plain--bold">Title</span>
+            <p class="items-catalog__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+            </p>
+            <span class="items-catalog__btn">Read more</span>
+          </div>
+        </a>
+        <a href="equipment-product.html" class="items-catalog__item">
+          <div class="items-catalog__wrapper">
+            <img  class="items-catalog__image" src="images/oborudovanie/2.jpg" alt="Image">
+          </div>
+          <div class="items-catalog__info">
+            <span class="items-catalog__title text__plain--bold">Title</span>
+            <p class="items-catalog__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <span class="items-catalog__btn">Read more</span>
+          </div>
+        </a>
+        <a href="equipment-product.html" class="items-catalog__item">
+          <div class="items-catalog__wrapper">
+            <img class="items-catalog__image" src="images/oborudovanie/3.jpeg" alt="Image">
+          </div>
+          <div class="items-catalog__info">
+            <span class="items-catalog__title text__plain--bold">Title</span>
+            <p class="items-catalog__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dignissimos dolores cupiditate sed cumque reprehenderit iure voluptatem odit voluptates quod, cum pariatur asperiores velit illum fugit neque itaque sequi.
+            </p>
+            <span class="items-catalog__btn">Read more</span>
           </div>
         </a>
       </div>
 
     </div>
-  </section>
+  </div>
+
+  <a class="button-up" href="#">
+    <i class="fas fa-arrow-up"></i><br>
+    Наверх
+  </a>
+
+  <script src="libraries/js/burgerNav.js"></script>
+  <script src="libraries/js/buttonUp.js"></script>
 
 </body>
 </html>

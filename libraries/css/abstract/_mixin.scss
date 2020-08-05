@@ -3,6 +3,76 @@
   margin: auto;
 }
 
+@mixin media-screen($size, $size-min: 1px) {
+  @if $size == xl {
+    @media screen and (min-width: $screen-xl) {
+      @content
+    }
+  }
+  @else if $size == lg {
+    @media (max-width: $screen-xl - 1px) and (min-width: $screen-lg) {
+      @content
+    }
+  }
+  @else if $size == md {
+    @media (max-width: $screen-lg - 1px) and (min-width: $screen-md) {
+      @content
+    }
+  }
+  @else if $size == sm {
+    @media (max-width: $screen-md - 1px) and (min-width: $screen-sm) {
+      @content
+    }
+  }
+  @else if $size == xs {
+    @media (max-width: $screen-sm - 1px) and (min-width: $screen-xs) {
+      @content
+    }
+  }
+  @else {
+    @media (max-width: $size) and (min-width: $size-min) {
+      @content
+    }
+  }
+}
+
+@mixin media-width($max-width, $min-width: 1px) {
+  @media (max-width: $max-width - 1px) and (min-width: $min-width) {
+    @content
+  }
+}
+
+@mixin media-screen-height($size) {
+  @if $size == xl {
+    @media screen and (min-height: $screen-xl) {
+      @content
+    }
+  }
+  @else if $size == lg {
+    @media (max-height: $screen-xl - 1px) and (min-height: $screen-lg) {
+      @content
+    }
+  }
+  @else if $size == md {
+    @media (max-height: $screen-lg - 1px) and (min-height: $screen-md) {
+      @content
+    }
+  }
+  @else if $size == sm {
+    @media (max-height: $screen-md - 1px) and (min-height: $screen-sm) {
+      @content
+    }
+  }
+  @else if $size == xs {
+    @media (max-height: $screen-sm - 1px) and (min-height: $screen-xs) {
+      @content
+    }
+  }
+}
+
+
+// Unrecommented
+
 @mixin display_mixin($display: flex, $arg1: row, $arg2: center, $arg3: center) {
   display: $display;
   @if ($display == flex) {
@@ -21,4 +91,11 @@
   flex-direction: $flex-direction;
   justify-content: $justify-content;
   align-items: $align-items;
+}
+
+@mixin display_grid_mixin($grid-temp-col: auto, $grid-temp-row: auto, $grid-gap: 0) {
+  display: grid;
+  grid-template-columns: $grid-temp-col;
+  grid-template-rows: $grid-temp-row;
+  grid-gap: $grid-gap;
 }

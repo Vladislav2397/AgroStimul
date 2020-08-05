@@ -1,0 +1,29 @@
+.carousel {
+  width: 270px * 3;
+  @include display_mixin(flex, row, start);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &__item {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 150px;
+    background: #333;
+    margin: 0 10px;
+    @include display_flex_mixin(row, center, center);
+    z-index: 5;
+    transition: 0.5s;
+    font-size: 2rem;
+  }
+
+  @include media-screen(md) {
+    width: 270px * 2;
+  }
+
+  @include media-screen($screen-md) {
+    width: 270px * 1;
+  }
+
+  @import "btn/btn";
+}

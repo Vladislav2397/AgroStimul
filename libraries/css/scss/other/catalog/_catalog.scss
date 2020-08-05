@@ -1,0 +1,22 @@
+.catalog {
+  @include display_flex_mixin();
+  @include wrapper(100%);
+
+  &__menu {
+    margin: 0 20px;
+    flex: 1;
+  }
+
+  &__items {
+    flex: 3;
+  }
+
+  &__product {
+    flex: 3;
+  }
+
+  @import
+    "menu-catalog/menu-catalog",
+    "items-catalog/items-catalog",
+    "product-catalog/product-catalog";
+}

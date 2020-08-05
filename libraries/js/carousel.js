@@ -4,8 +4,11 @@ var step = 270;
 var strStart = "translateX(-";
 var strEnd = "px)";
 
-var items = document.getElementsByClassName("carousel-item");
+var items = document.getElementsByClassName("carousel__item");
 var carousel = document.getElementsByClassName("carousel");
+
+document.getElementsByClassName("btn__left")[0].setAttribute('onclick', 'carouselSlide("left")');
+document.getElementsByClassName("btn__right")[0].setAttribute('onclick', 'carouselSlide("right")');
 
 var carouselSlide = function(move) {
 

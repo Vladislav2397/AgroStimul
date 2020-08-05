@@ -1,14 +1,14 @@
 var nav = document.getElementsByTagName("nav")[0];
-var buttonUp = document.getElementById("button-up");
-var sticky = nav.offsetTop;
+var buttonUp = document.getElementsByClassName("button-up")[0];
+var sticky = nav.offsetTop + 30;
 
 window.onscroll = function() {
 
     // Nav sticky
     if (window.pageYOffset >= sticky) {
-        nav.classList.add("fixed");
+        nav.classList.add("nav__fixed");
     } else {
-        nav.classList.remove("fixed");
+        nav.classList.remove("nav__fixed");
     }
 
     // Button 'up'

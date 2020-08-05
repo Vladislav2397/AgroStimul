@@ -1,0 +1,57 @@
+.intro {
+  background-size: cover;
+  background-image: url(../../../../../images/bgIndex.jpg);
+  height: 100vh;
+  min-height: $screen-md;
+  position: relative;
+
+  &__inner {
+    padding-top: 20px;
+    padding-left: 40px;
+
+    @include media-screen(xl) {
+      @include wrapper($screen-xl);
+      padding-top: 20px;
+    }
+  }
+
+  &__title {
+    margin: 50px 0;
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include media-screen($screen-md) {
+      font-size: $font-sm;
+    }
+  }
+
+  &__short-info {
+    position: absolute;
+    top: 50%;
+
+    @include media-screen-height(sm) {
+      top: 350px;
+    }
+    
+    @include media-screen-height(xs) {
+      top: 350px;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+  }
+  
+  @import "short-info/short-info";
+
+  @import 
+    "../../other/nav/nav",
+    "../../other/burger/burger";
+}

@@ -1,0 +1,19 @@
+.company-links {
+  &__wrapper {
+    border: 1px solid $main-color;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+
+    &:last-child {
+      margin: 0 0;
+    }
+  }
+
+  &__link {
+    font-size: 2rem;
+    width: 100%;
+    font-weight: 600;
+  }
+}

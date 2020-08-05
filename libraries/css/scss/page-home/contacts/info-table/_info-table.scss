@@ -1,0 +1,31 @@
+.info-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 30px);
+  grid-gap: 20px;
+  justify-content: center;
+  align-content: center;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 20px;
+  }
+
+  &__header, &__content {
+    font-size: 1.6rem;
+  }
+
+  &__header {
+    text-align: end;
+    
+    @include media-screen(xs) {
+      text-align: center;
+    }
+  }
+}
