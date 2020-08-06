@@ -1,0 +1,84 @@
+@mixin wrapper($width: 80%) {
+  width: $width;
+  margin: auto;
+}
+
+@mixin media-screen($size, $size-min: 1px) {
+  @if $size == xl {
+    @media screen and (min-width: $screen-xl) {
+      @content
+    }
+  };
+  @if $size == lg {
+    @media (max-width: $screen-xl - 1px) and (min-width: $screen-lg) {
+      @content
+    }
+  };
+  @if $size == md {
+    @media (max-width: $screen-lg - 1px) and (min-width: $screen-md) {
+      @content
+    }
+  };
+  @if $size == sm {
+    @media (max-width: $screen-md - 1px) and (min-width: $screen-sm) {
+      @content
+    }
+  };
+  @if $size == xs {
+    @media (max-width: $screen-sm - 1px) and (min-width: $screen-xs) {
+      @content
+    }
+  };
+  @if $size {
+    @media (max-width: $size) and (min-width: $size-min) {
+      @content
+    }
+  };
+}
+
+@mixin media-screen-height($size) {
+  @if $size == xl {
+    @media screen and (min-height: $screen-xl) {
+      @content
+    }
+  };
+  @if $size == lg {
+    @media (max-height: $screen-xl - 1px) and (min-height: $screen-lg) {
+      @content
+    }
+  };
+  @if $size == md {
+    @media (max-height: $screen-lg - 1px) and (min-height: $screen-md) {
+      @content
+    }
+  };
+  @if $size == sm {
+    @media (max-height: $screen-md - 1px) and (min-height: $screen-sm) {
+      @content
+    }
+  };
+  @if $size == xs {
+    @media (max-height: $screen-sm - 1px) and (min-height: $screen-xs) {
+      @content
+    }
+  };
+  @if $size {
+    @media (max-height: $size - 1px) and (min-height: 1px) {
+      @content
+    }
+  };
+}
+
+@mixin display_flex_mixin($flex-direction: row, $justify-content: start, $align-items: start) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin display_grid_mixin($grid-temp-col: auto, $grid-temp-row: auto, $grid-gap: 0) {
+  display: grid;
+  grid-template-columns: $grid-temp-col;
+  grid-template-rows: $grid-temp-row;
+  grid-gap: $grid-gap;
+}

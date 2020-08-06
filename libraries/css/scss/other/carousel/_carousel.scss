@@ -1,6 +1,6 @@
 .carousel {
   width: 270px * 3;
-  @include display_mixin(flex, row, start);
+  @include display_flex_mixin(row, start, center);
   overflow: hidden;
   position: relative;
   z-index: 1;

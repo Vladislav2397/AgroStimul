@@ -23,6 +23,10 @@
     &--center {
       text-align: center;
     }
+
+    &--small {
+      font-size: $font-title-sm;
+    }
   }
 
   &__plain {
@@ -38,9 +42,17 @@
 
     &--small {
       font-size: $font-md;
+
+      @include media-screen($screen-lg) {
+        font-size: $font-sm;
+      }
     }
 
     &--smaller {
+      font-size: $font-sm;
+    }
+
+    @include media-screen($screen-lg) {
       font-size: $font-sm;
     }
   }

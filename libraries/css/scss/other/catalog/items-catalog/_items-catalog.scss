@@ -11,6 +11,11 @@
     height: 200px;
     border: 1px solid $main-color;
     border-radius: 10px;
+
+    @include media-screen($screen-lg) {
+      width: 150px;
+      height: 125px;
+    }
   }
 
   &__info {

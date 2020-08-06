@@ -1,0 +1,23 @@
+@import
+  "scss/abstract/variables",
+  "scss/abstract/font",
+  "scss/abstract/mixin";
+
+@import
+  "scss/other/burger/burger",
+  "scss/other/nav/nav",
+  "scss/other/catalog/catalog",
+  "scss/other/tabs/tabs",
+  "scss/other/btn-up/button-up";
+  
+@import
+  "scss/page-home/page-home",
+  "scss/page-equipment/page-equipment",
+  "scss/page-equipment-product/page-equipment-product",
+  "scss/page-mini-factories/page-mini-factories";
+
+@import "scss/base/all-tags";
+
+@import
+  "scss/other/text/text",
+  "scss/other/btn-up/button-up";

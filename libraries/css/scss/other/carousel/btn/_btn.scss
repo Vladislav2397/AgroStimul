@@ -1,7 +1,7 @@
 .btn {
   position: absolute;
-  @include display_mixin();
-  background: $GREEN;
+  @include display_flex_mixin(row, center, center);
+  background: $main-color;
   border: none;
   border-radius: 50%;
   width: 30px;

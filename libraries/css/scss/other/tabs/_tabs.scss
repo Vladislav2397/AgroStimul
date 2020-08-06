@@ -5,6 +5,10 @@
 
   &__nav {
     @include display_flex_mixin(column);
+
+    @include media-screen($screen-lg) {
+      flex-direction: row;
+    }
   }
 
   &__link {
@@ -13,7 +17,7 @@
     cursor: pointer;
 
     &--active {
-      background: $GREEN;
+      background: $main-color;
       color: #fff;
     }
   }
@@ -25,5 +29,10 @@
     &--show {
       display: flex;
     }
+  }
+
+  @include media-screen($screen-lg) {
+    grid-template-columns: 100%;
+    grid-template-rows: 30px auto;
   }
 }
